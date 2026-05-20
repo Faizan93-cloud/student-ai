@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student AI - Learn with 3D Models</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left: Chat Interface -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <h1>Student AI 🤖</h1>
+                <p>Ask anything and see 3D models!</p>
+            </div>
+            
+            <div class="chat-box" id="chatBox">
+                <div class="message ai-message">
+                    <p>👋 Hello! Ask me about the heart, solar system, atoms, skeletons, or engines. I'll show you 3D models!</p>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Ask me about heart, solar system, atom, skeleton, engine..."
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Right: 3D Model Viewer -->
+        <div class="model-section">
+            <div class="model-header">
+                <h2>3D Viewer</h2>
+                <p id="modelLabel">Ready to learn</p>
+            </div>
+            <div id="canvas-container"></div>
+        </div>
+    </div>
+
+    <script src="three/viewer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
